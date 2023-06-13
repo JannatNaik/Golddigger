@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="log.html" target="_blank">
+        <input type="text" id="name" placeholder="name.." oninput="store()"><br>
+        <input type="password" id="passwd" placeholder="password"><br>
+        <input type="date" id="color">
+        <button type="submit" id="submit" onclick="store()">Submit</button>
+    </form>
+</body>
+<script>
+function store(){
+    let name = document.getElementById("name").value;
+    let passwd = document.getElementById("passwd").value;
+    let color = document.getElementById("color").value;
+
+    // console.log(name + " " + passwd);
+    localStorage.setItem("uname",name);
+    localStorage.setItem("passwd",passwd);
+    sessionStorage.setItem("color",color);
+}
+</script>
+</html>
