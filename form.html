@@ -8,22 +8,16 @@
 </head>
 <body>
     <form action="log.html" target="_blank">
-        <input type="text" id="name" placeholder="name.." oninput="store()"><br>
+        <input type="text" id="uname" placeholder="name....."><br>
         <input type="password" id="passwd" placeholder="password"><br>
-        <input type="date" id="color">
-        <button type="submit" id="submit" onclick="store()">Submit</button>
+        <button type="submit" onclick="run()">submit</button>
     </form>
 </body>
 <script>
-function store(){
-    let name = document.getElementById("name").value;
-    let passwd = document.getElementById("passwd").value;
-    let color = document.getElementById("color").value;
-
-    // console.log(name + " " + passwd);
-    localStorage.setItem("uname",name);
-    localStorage.setItem("passwd",passwd);
-    sessionStorage.setItem("color",color);
-}
+    function run(){
+    let uname = document.getElementById("uname").value;
+    // localStorage.setItem("uname",uname);
+    sessionStorage.setItem("uname",uname)
+    }
 </script>
 </html>

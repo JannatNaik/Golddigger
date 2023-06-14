@@ -7,13 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="name"></div><br>
-    <div class="pass"></div><br>
-    <div class="color"></div>
+    <div id="name">Welcome to dcs , </div>
 </body>
 <script>
-document.querySelector(".name").innerHTML = localStorage.getItem("uname");
-document.querySelector(".pass").innerHTML = localStorage.getItem("passwd");
-document.querySelector(".color").innerHTML = sessionStorage.getItem("color");
+    document.getElementById("name").innerHTML += localStorage.getItem("uname");
+    // document.getElementById("name").innerHTML += sessionStorage.getItem("uname");
+    
 </script>
 </html>
